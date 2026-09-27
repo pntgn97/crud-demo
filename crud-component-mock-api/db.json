@@ -1,565 +1,848 @@
 {
-  "categories": [
+  "$schema": "./node_modules/json-server/schema.json",
+  "groups": [
     {
-      "id": "56d17309-9754-442d-8652-d96514ba6372",
-      "name": "Elektronika",
-      "description": "Elektronski uređaji i oprema"
+      "id": "a656e3e1-d4a1-4350-8f7b-3f54de67d45b",
+      "name": "Kočioni sistem",
+      "description": "Kočione pločice, diskovi, čeljusti i kočiona tečnost"
     },
     {
-      "id": "94cc7c78-8acb-47c9-ace6-1d3fab5198aa",
-      "name": "Kancelarijski materijal",
-      "description": "Pribor za rad u kancelariji"
+      "id": "4bd09139-f185-4aa1-95e7-5f32b98e7dc9",
+      "name": "Filteri",
+      "description": "Filteri ulja, vazduha, goriva i kabine"
     },
     {
-      "id": "4df92b68-2480-4f00-af5c-a55378f9e306",
-      "name": "Namještaj",
-      "description": "Kancelarijski i kućni namještaj"
+      "id": "b1862191-a3a0-42dd-bf31-62252cfb0792",
+      "name": "Ovjes i upravljanje",
+      "description": "Amortizeri, spone, ramena i ležajevi točkova"
     },
     {
-      "id": "47a5a3f5-987e-4e3a-83d9-e21f8b761e7e",
-      "name": "Sportska oprema",
-      "description": "Oprema za rekreaciju i sport"
+      "id": "f7165de3-5f32-431e-b903-c28cd1274ebc",
+      "name": "Elektrika",
+      "description": "Akumulatori, svjećice, sijalice i alternatori"
     },
     {
-      "id": "ec2d7a25-5ae9-44c5-92e6-c3581229fda4",
-      "name": "Kuhinjski aparati",
-      "description": "Aparati za pripremu hrane i pića"
+      "id": "224fea10-42ec-4c1c-8f8e-b866dc88110b",
+      "name": "Ulja i tečnosti",
+      "description": "Motorna ulja, antifriz i ostale tečnosti"
+    },
+    {
+      "id": "370ab25b-6148-4409-8fe6-72df91521194",
+      "name": "Motor i prenos",
+      "description": "Zupčasti kaiševi, pumpe za vodu i kvačila"
     }
   ],
-  "products": [
+  "articles": [
     {
-      "id": "743f3b94-a96e-4f54-893e-72c50e430f6b",
-      "name": "Laptop Lenovo ThinkPad",
-      "price": 1450,
-      "quantity": 12,
-      "categoryId": "56d17309-9754-442d-8652-d96514ba6372"
+      "id": "cf318325-08fe-42e4-8795-9d8681d53cff",
+      "catalogNumber": "0 986 494 104",
+      "name": "Kočione pločice prednje",
+      "manufacturer": "Bosch",
+      "unit": "set",
+      "groupId": "a656e3e1-d4a1-4350-8f7b-3f54de67d45b",
+      "shelfLocation": "A-01-1",
+      "minStock": 4
     },
     {
-      "id": "36cdc749-de11-4ddd-91a2-e0947b3aacd4",
-      "name": "Bežični miš",
-      "price": 25,
-      "quantity": 80,
-      "categoryId": "56d17309-9754-442d-8652-d96514ba6372"
+      "id": "2a911e34-83dc-42b2-94de-a85601f6dcec",
+      "catalogNumber": "13.0460-2735.2",
+      "name": "Kočione pločice zadnje",
+      "manufacturer": "ATE",
+      "unit": "set",
+      "groupId": "a656e3e1-d4a1-4350-8f7b-3f54de67d45b",
+      "shelfLocation": "A-01-2",
+      "minStock": 4
     },
     {
-      "id": "9d4dfe7d-4711-4e25-8af3-0b6de1230da8",
-      "name": "Hemijska olovka",
-      "price": 1.5,
-      "quantity": 500,
-      "categoryId": "94cc7c78-8acb-47c9-ace6-1d3fab5198aa"
+      "id": "ebfd42aa-8b7e-4eb1-8ace-fa8fc826275d",
+      "catalogNumber": "09.9772.11",
+      "name": "Kočioni disk prednji 288 mm",
+      "manufacturer": "Brembo",
+      "unit": "kom",
+      "groupId": "a656e3e1-d4a1-4350-8f7b-3f54de67d45b",
+      "shelfLocation": "A-01-3",
+      "minStock": 4
     },
     {
-      "id": "2368d15e-3c3c-4705-9c8b-de68f4b96775",
-      "name": "Sveska A4",
-      "price": 3,
-      "quantity": 200,
-      "categoryId": "94cc7c78-8acb-47c9-ace6-1d3fab5198aa"
+      "id": "82e1b652-0b1d-41c9-8eac-9aa8ccf016be",
+      "catalogNumber": "DF4180",
+      "name": "Kočioni disk zadnji 253 mm",
+      "manufacturer": "TRW",
+      "unit": "kom",
+      "groupId": "a656e3e1-d4a1-4350-8f7b-3f54de67d45b",
+      "shelfLocation": "A-01-4",
+      "minStock": 2
     },
     {
-      "id": "162f7ac8-0126-4329-b52d-82c9f9d9bc14",
-      "name": "Kancelarijska stolica",
-      "price": 180,
-      "quantity": 30,
-      "categoryId": "4df92b68-2480-4f00-af5c-a55378f9e306"
+      "id": "adbc3096-e7eb-431c-9ce7-f6ff62d1f681",
+      "catalogNumber": "03.9901-6202.2",
+      "name": "Kočiona tečnost DOT 4",
+      "manufacturer": "ATE",
+      "unit": "l",
+      "groupId": "a656e3e1-d4a1-4350-8f7b-3f54de67d45b",
+      "shelfLocation": "A-02-1",
+      "minStock": 5
     },
     {
-      "id": "92d2819f-0e9c-4cef-95ff-9365059ba21d",
-      "name": "Radni sto",
-      "price": 320,
-      "quantity": 15,
-      "categoryId": "4df92b68-2480-4f00-af5c-a55378f9e306"
+      "id": "28da48ce-d1c1-41e3-94e0-e344b005add1",
+      "catalogNumber": "W 712/75",
+      "name": "Filter ulja",
+      "manufacturer": "Mann-Filter",
+      "unit": "kom",
+      "groupId": "4bd09139-f185-4aa1-95e7-5f32b98e7dc9",
+      "shelfLocation": "B-01-1",
+      "minStock": 10
     },
     {
-      "id": "0625c2de-e84a-4675-ae7b-691de01057fb",
-      "name": "Monitor Dell 27\"",
-      "price": 320,
-      "quantity": 18,
-      "categoryId": "56d17309-9754-442d-8652-d96514ba6372"
+      "id": "75ae9e9d-8665-4997-a79a-79735e93e3c0",
+      "catalogNumber": "HU 719/7 x",
+      "name": "Filter ulja (uložak)",
+      "manufacturer": "Mann-Filter",
+      "unit": "kom",
+      "groupId": "4bd09139-f185-4aa1-95e7-5f32b98e7dc9",
+      "shelfLocation": "B-01-2",
+      "minStock": 6
     },
     {
-      "id": "fad8c829-1627-487d-9945-9630e9fc4193",
-      "name": "Mehanička tastatura",
-      "price": 95,
-      "quantity": 40,
-      "categoryId": "56d17309-9754-442d-8652-d96514ba6372"
+      "id": "ead6e609-8199-4efe-945e-9604163f5ad8",
+      "catalogNumber": "C 30 005",
+      "name": "Filter vazduha",
+      "manufacturer": "Mann-Filter",
+      "unit": "kom",
+      "groupId": "4bd09139-f185-4aa1-95e7-5f32b98e7dc9",
+      "shelfLocation": "B-01-3",
+      "minStock": 6
     },
     {
-      "id": "c153842e-589b-4a41-8468-02fc199f6f44",
-      "name": "USB-C Hub",
-      "price": 35,
-      "quantity": 60,
-      "categoryId": "56d17309-9754-442d-8652-d96514ba6372"
+      "id": "51a5d56d-17f1-4576-818e-c4b78e74d88e",
+      "catalogNumber": "LX 1566",
+      "name": "Filter vazduha",
+      "manufacturer": "Mahle",
+      "unit": "kom",
+      "groupId": "4bd09139-f185-4aa1-95e7-5f32b98e7dc9",
+      "shelfLocation": "B-01-4",
+      "minStock": 4
     },
     {
-      "id": "d4128bff-426b-496e-9713-29ba58b030f7",
-      "name": "Web kamera Full HD",
-      "price": 55,
-      "quantity": 25,
-      "categoryId": "56d17309-9754-442d-8652-d96514ba6372"
+      "id": "1462132e-5dda-40e9-a082-ed3510cd530e",
+      "catalogNumber": "WK 820/1",
+      "name": "Filter goriva",
+      "manufacturer": "Mann-Filter",
+      "unit": "kom",
+      "groupId": "4bd09139-f185-4aa1-95e7-5f32b98e7dc9",
+      "shelfLocation": "B-02-1",
+      "minStock": 4
     },
     {
-      "id": "22c7ba07-7a1f-4a16-8cbd-e6939baa76e1",
-      "name": "Slušalice sa mikrofonom",
-      "price": 70,
-      "quantity": 50,
-      "categoryId": "56d17309-9754-442d-8652-d96514ba6372"
+      "id": "a7a8e8d0-bdb0-43af-a262-f4a655b675c6",
+      "catalogNumber": "CUK 2939",
+      "name": "Filter kabine sa aktivnim ugljem",
+      "manufacturer": "Mann-Filter",
+      "unit": "kom",
+      "groupId": "4bd09139-f185-4aa1-95e7-5f32b98e7dc9",
+      "shelfLocation": "B-02-2",
+      "minStock": 4
     },
     {
-      "id": "9306b042-2e79-4118-bb2f-203303916081",
-      "name": "Prenosivi SSD 1TB",
-      "price": 110,
-      "quantity": 22,
-      "categoryId": "56d17309-9754-442d-8652-d96514ba6372"
+      "id": "6b66fe57-43e6-422d-8f62-b47a8c324256",
+      "catalogNumber": "313 478",
+      "name": "Amortizer prednji",
+      "manufacturer": "Sachs",
+      "unit": "kom",
+      "groupId": "b1862191-a3a0-42dd-bf31-62252cfb0792",
+      "shelfLocation": "C-01-1",
+      "minStock": 2
     },
     {
-      "id": "b2edd595-a74c-45ec-be42-33917ba80f00",
-      "name": "Punjač za laptop",
-      "price": 40,
-      "quantity": 33,
-      "categoryId": "56d17309-9754-442d-8652-d96514ba6372"
+      "id": "6539e923-327a-4e6d-9a17-0775c4792c57",
+      "catalogNumber": "G8012",
+      "name": "Amortizer zadnji",
+      "manufacturer": "Monroe",
+      "unit": "kom",
+      "groupId": "b1862191-a3a0-42dd-bf31-62252cfb0792",
+      "shelfLocation": "C-01-2",
+      "minStock": 2
     },
     {
-      "id": "0022b217-2d66-4780-b02f-6e2e98954ca9",
-      "name": "Docking stanica",
-      "price": 150,
-      "quantity": 10,
-      "categoryId": "56d17309-9754-442d-8652-d96514ba6372"
+      "id": "4bd0bd30-5f67-40b0-b570-e691bcd6c87e",
+      "catalogNumber": "36830 01",
+      "name": "Krajnik spone",
+      "manufacturer": "Lemförder",
+      "unit": "kom",
+      "groupId": "b1862191-a3a0-42dd-bf31-62252cfb0792",
+      "shelfLocation": "C-02-1",
+      "minStock": 2
     },
     {
-      "id": "18c992d8-0802-48a7-814e-b729a65b66cb",
-      "name": "Fascikla za dokumenta",
-      "price": 4,
-      "quantity": 300,
-      "categoryId": "94cc7c78-8acb-47c9-ace6-1d3fab5198aa"
+      "id": "aff5b164-6e84-446d-99e7-cc3ec45a7a59",
+      "catalogNumber": "VKBA 3637",
+      "name": "Set ležaja točka",
+      "manufacturer": "SKF",
+      "unit": "set",
+      "groupId": "b1862191-a3a0-42dd-bf31-62252cfb0792",
+      "shelfLocation": "C-02-2",
+      "minStock": 2
     },
     {
-      "id": "9cfc9fa0-43e3-4fb2-acea-54fbb34fca32",
-      "name": "Markeri u boji (set)",
-      "price": 8,
-      "quantity": 150,
-      "categoryId": "94cc7c78-8acb-47c9-ace6-1d3fab5198aa"
+      "id": "6a61a169-d661-4464-be62-1cd424c62bde",
+      "catalogNumber": "27185",
+      "name": "Rame ovjesa donje lijevo",
+      "manufacturer": "Febi Bilstein",
+      "unit": "kom",
+      "groupId": "b1862191-a3a0-42dd-bf31-62252cfb0792",
+      "shelfLocation": "C-02-3",
+      "minStock": 2
     },
     {
-      "id": "c7a83d3e-1432-4722-818b-8fd5a15f4902",
-      "name": "Klamerica",
-      "price": 12,
-      "quantity": 90,
-      "categoryId": "94cc7c78-8acb-47c9-ace6-1d3fab5198aa"
+      "id": "461b6da6-2711-4741-955f-c36a3f9f9e2e",
+      "catalogNumber": "0 092 S40 050",
+      "name": "Akumulator 12 V 60 Ah",
+      "manufacturer": "Bosch",
+      "unit": "kom",
+      "groupId": "f7165de3-5f32-431e-b903-c28cd1274ebc",
+      "shelfLocation": "D-01-1",
+      "minStock": 3
     },
     {
-      "id": "9d2f433e-9d7c-4970-8abb-6400ed41b6a6",
-      "name": "Papir za štampač A4 (rizma)",
-      "price": 6,
-      "quantity": 220,
-      "categoryId": "94cc7c78-8acb-47c9-ace6-1d3fab5198aa"
+      "id": "448c443a-a403-403f-b22e-0b573ee6c0a8",
+      "catalogNumber": "560 409 054",
+      "name": "Akumulator 12 V 60 Ah Blue Dynamic",
+      "manufacturer": "Varta",
+      "unit": "kom",
+      "groupId": "f7165de3-5f32-431e-b903-c28cd1274ebc",
+      "shelfLocation": "D-01-2",
+      "minStock": 3
     },
     {
-      "id": "5e486646-fc7a-4d9b-91e3-10bfa95f6772",
-      "name": "Organizator za sto",
-      "price": 18,
-      "quantity": 45,
-      "categoryId": "94cc7c78-8acb-47c9-ace6-1d3fab5198aa"
+      "id": "9a38e78b-0aac-422b-84d1-64ad2a102af9",
+      "catalogNumber": "BKR6E",
+      "name": "Svjećica",
+      "manufacturer": "NGK",
+      "unit": "kom",
+      "groupId": "f7165de3-5f32-431e-b903-c28cd1274ebc",
+      "shelfLocation": "D-02-1",
+      "minStock": 16
     },
     {
-      "id": "3de927f8-0dd8-4848-a87d-63ee62865913",
-      "name": "Bilježnica sa spiralom",
-      "price": 5,
-      "quantity": 180,
-      "categoryId": "94cc7c78-8acb-47c9-ace6-1d3fab5198aa"
+      "id": "209b8881-00e9-4747-bb06-cc44db1ad202",
+      "catalogNumber": "64210",
+      "name": "Sijalica H7 12 V 55 W",
+      "manufacturer": "Osram",
+      "unit": "kom",
+      "groupId": "f7165de3-5f32-431e-b903-c28cd1274ebc",
+      "shelfLocation": "D-02-2",
+      "minStock": 10
     },
     {
-      "id": "777751d2-0870-4902-8219-791279d599dd",
-      "name": "Kancelarijska lampa",
-      "price": 32,
-      "quantity": 28,
-      "categoryId": "94cc7c78-8acb-47c9-ace6-1d3fab5198aa"
+      "id": "ddc7aafb-f1a8-4b90-9e2b-86571013a29f",
+      "catalogNumber": "12342PRC1",
+      "name": "Sijalica H4 12 V 60/55 W",
+      "manufacturer": "Philips",
+      "unit": "kom",
+      "groupId": "f7165de3-5f32-431e-b903-c28cd1274ebc",
+      "shelfLocation": "D-02-3",
+      "minStock": 10
     },
     {
-      "id": "5207c517-d518-402d-8733-eb20c207c216",
-      "name": "Ormar za dokumenta",
-      "price": 210,
-      "quantity": 8,
-      "categoryId": "4df92b68-2480-4f00-af5c-a55378f9e306"
+      "id": "7cb23e49-0c81-44e1-bf1f-f1f079d3a176",
+      "catalogNumber": "439682",
+      "name": "Alternator 14 V 140 A",
+      "manufacturer": "Valeo",
+      "unit": "kom",
+      "groupId": "f7165de3-5f32-431e-b903-c28cd1274ebc",
+      "shelfLocation": "D-03-1",
+      "minStock": 1
     },
     {
-      "id": "f1264cc6-2830-40b0-b549-b8c7c25df324",
-      "name": "Polica za knjige",
-      "price": 95,
-      "quantity": 20,
-      "categoryId": "4df92b68-2480-4f00-af5c-a55378f9e306"
+      "id": "895be46b-a45c-4467-a6ed-82160b7ae38c",
+      "catalogNumber": "15669E",
+      "name": "Motorno ulje 5W-30",
+      "manufacturer": "Castrol",
+      "unit": "l",
+      "groupId": "224fea10-42ec-4c1c-8f8e-b866dc88110b",
+      "shelfLocation": "E-01-1",
+      "minStock": 40
     },
     {
-      "id": "6cbde423-f704-4788-9f2c-1bb97754364b",
-      "name": "Fotelja za čekaonicu",
-      "price": 140,
-      "quantity": 12,
-      "categoryId": "4df92b68-2480-4f00-af5c-a55378f9e306"
+      "id": "9deca408-b27b-4f59-863f-059cdc12a7d1",
+      "catalogNumber": "153536",
+      "name": "Motorno ulje 5W-40",
+      "manufacturer": "Mobil",
+      "unit": "l",
+      "groupId": "224fea10-42ec-4c1c-8f8e-b866dc88110b",
+      "shelfLocation": "E-01-2",
+      "minStock": 40
     },
     {
-      "id": "1dcbafcf-adf2-4266-9f3a-b374d81e337b",
-      "name": "Konferencijski sto",
-      "price": 480,
-      "quantity": 5,
-      "categoryId": "4df92b68-2480-4f00-af5c-a55378f9e306"
+      "id": "f8f44767-5dd0-4a36-adf2-a2281941f358",
+      "catalogNumber": "109776",
+      "name": "Antifriz G12 koncentrat",
+      "manufacturer": "Motul",
+      "unit": "l",
+      "groupId": "224fea10-42ec-4c1c-8f8e-b866dc88110b",
+      "shelfLocation": "E-02-1",
+      "minStock": 20
     },
     {
-      "id": "8712cb96-0a0f-4b0f-863d-83e857740950",
-      "name": "Lopta za fudbal",
-      "price": 22,
-      "quantity": 60,
-      "categoryId": "47a5a3f5-987e-4e3a-83d9-e21f8b761e7e"
+      "id": "9962a022-1a2c-40d0-8e4b-811a915860d6",
+      "catalogNumber": "332 505",
+      "name": "Tečnost za brisače zimska -20 °C",
+      "manufacturer": "Sonax",
+      "unit": "l",
+      "groupId": "224fea10-42ec-4c1c-8f8e-b866dc88110b",
+      "shelfLocation": "E-02-2",
+      "minStock": 20
     },
     {
-      "id": "2015811e-6218-44ff-a30b-05e96cb12bd7",
-      "name": "Uteg 5kg",
-      "price": 18,
-      "quantity": 40,
-      "categoryId": "47a5a3f5-987e-4e3a-83d9-e21f8b761e7e"
+      "id": "2130d2f6-07f7-499a-8c99-f33b1c46d2cb",
+      "catalogNumber": "CT1028K1",
+      "name": "Set zupčastog kaiša",
+      "manufacturer": "ContiTech",
+      "unit": "set",
+      "groupId": "370ab25b-6148-4409-8fe6-72df91521194",
+      "shelfLocation": "F-01-1",
+      "minStock": 2
     },
     {
-      "id": "a95ddc37-bc42-40b8-835b-de7040c68a12",
-      "name": "Traka za trčanje",
-      "price": 350,
-      "quantity": 6,
-      "categoryId": "47a5a3f5-987e-4e3a-83d9-e21f8b761e7e"
+      "id": "56d46d66-ee62-4683-a6a0-03afa0429866",
+      "catalogNumber": "K015607XS",
+      "name": "Set zupčastog kaiša",
+      "manufacturer": "Gates",
+      "unit": "set",
+      "groupId": "370ab25b-6148-4409-8fe6-72df91521194",
+      "shelfLocation": "F-01-2",
+      "minStock": 2
     },
     {
-      "id": "2bd6192f-4f7d-414f-afa6-4908788a9db8",
-      "name": "Bicikl brdski",
-      "price": 620,
-      "quantity": 4,
-      "categoryId": "47a5a3f5-987e-4e3a-83d9-e21f8b761e7e"
+      "id": "8598b01e-e6a0-4da3-8f63-b3ed9762de4f",
+      "catalogNumber": "VKPC 81418",
+      "name": "Pumpa za vodu",
+      "manufacturer": "SKF",
+      "unit": "kom",
+      "groupId": "370ab25b-6148-4409-8fe6-72df91521194",
+      "shelfLocation": "F-02-1",
+      "minStock": 2
     },
     {
-      "id": "fb2c611a-ba41-4588-97e5-d6bfe80deba9",
-      "name": "Aparat za kafu",
-      "price": 180,
-      "quantity": 15,
-      "categoryId": "ec2d7a25-5ae9-44c5-92e6-c3581229fda4"
-    },
-    {
-      "id": "986f2da1-60d4-49a9-8419-feaf6529ce58",
-      "name": "Blender",
-      "price": 65,
-      "quantity": 25,
-      "categoryId": "ec2d7a25-5ae9-44c5-92e6-c3581229fda4"
-    },
-    {
-      "id": "6ea9bf4b-4160-41ef-9088-1bf051296ddf",
-      "name": "Toster",
-      "price": 45,
-      "quantity": 30,
-      "categoryId": "ec2d7a25-5ae9-44c5-92e6-c3581229fda4"
-    },
-    {
-      "id": "793284a1-b94c-402f-af93-78a19be5c1b6",
-      "name": "Mikrotalasna rerna",
-      "price": 130,
-      "quantity": 10,
-      "categoryId": "ec2d7a25-5ae9-44c5-92e6-c3581229fda4"
+      "id": "d83d6a0b-1bfe-4d22-9283-30a93d2645ab",
+      "catalogNumber": "624 3139 00",
+      "name": "Set kvačila",
+      "manufacturer": "LuK",
+      "unit": "set",
+      "groupId": "370ab25b-6148-4409-8fe6-72df91521194",
+      "shelfLocation": "F-03-1",
+      "minStock": 1
     }
   ],
-  "orders": [
+  "suppliers": [
     {
-      "id": "e6106b44-9456-4bb1-87df-552b78828284",
-      "customerName": "Marko Marković",
-      "date": "2026-08-10",
-      "status": "završena",
+      "id": "e9137397-45ab-4098-bf77-4f98b7baddf8",
+      "name": "Auto dijelovi Kovačević d.o.o.",
+      "jib": "4401234560007",
+      "address": "Kninska 12",
+      "city": "Banja Luka",
+      "phone": "051 123 456",
+      "email": "prodaja@kovacevic-dijelovi.ba"
+    },
+    {
+      "id": "b2f447bf-3243-45e9-93c0-d08d957fd549",
+      "name": "Moto centar Ilić d.o.o.",
+      "jib": "4402345670003",
+      "address": "Vojvode Mišića 45",
+      "city": "Bijeljina",
+      "phone": "055 210 330",
+      "email": "info@motocentar-ilic.ba"
+    },
+    {
+      "id": "76070d1e-d71d-4fec-9a3a-b8b83aae6223",
+      "name": "Filter Trade d.o.o.",
+      "jib": "4200456780001",
+      "address": "Zmaja od Bosne 88",
+      "city": "Sarajevo",
+      "phone": "033 456 789",
+      "email": "narudzbe@filtertrade.ba"
+    },
+    {
+      "id": "e8160520-3a93-4585-a2ca-ca6f784a7176",
+      "name": "Elektro auto Petrović s.p.",
+      "jib": "4403456780009",
+      "address": "Cara Dušana 7",
+      "city": "Doboj",
+      "phone": "053 225 114",
+      "email": "kontakt@elektroauto-petrovic.ba"
+    },
+    {
+      "id": "eb15fea2-3c35-447d-b145-53c28bef3f02",
+      "name": "Lubrikanti distribucija d.o.o.",
+      "jib": "4404567890005",
+      "address": "Industrijska zona bb",
+      "city": "Laktaši",
+      "phone": "051 532 100",
+      "email": "prodaja@lubrikanti.ba"
+    }
+  ],
+  "receipts": [
+    {
+      "id": "accd79d7-b815-422a-ad77-6b15da892fcd",
+      "date": "2026-06-02",
+      "supplierId": "e9137397-45ab-4098-bf77-4f98b7baddf8",
+      "invoiceNumber": "UF-0412/26",
       "items": [
         {
-          "productId": "d4128bff-426b-496e-9713-29ba58b030f7",
-          "quantity": 3,
-          "unitPrice": 55
+          "articleId": "cf318325-08fe-42e4-8795-9d8681d53cff",
+          "quantity": 10
         },
         {
-          "productId": "9d2f433e-9d7c-4970-8abb-6400ed41b6a6",
-          "quantity": 2,
-          "unitPrice": 6
+          "articleId": "2a911e34-83dc-42b2-94de-a85601f6dcec",
+          "quantity": 8
         },
         {
-          "productId": "793284a1-b94c-402f-af93-78a19be5c1b6",
-          "quantity": 3,
-          "unitPrice": 130
+          "articleId": "ebfd42aa-8b7e-4eb1-8ace-fa8fc826275d",
+          "quantity": 12
+        },
+        {
+          "articleId": "82e1b652-0b1d-41c9-8eac-9aa8ccf016be",
+          "quantity": 6
+        },
+        {
+          "articleId": "adbc3096-e7eb-431c-9ce7-f6ff62d1f681",
+          "quantity": 20
         }
       ]
     },
     {
-      "id": "b50091a4-712a-4447-8784-03505c807b45",
-      "customerName": "Ana Anić",
-      "date": "2026-08-22",
-      "status": "u obradi",
+      "id": "d86d478b-53dd-4b94-9e21-8d84dd27db95",
+      "date": "2026-06-03",
+      "supplierId": "76070d1e-d71d-4fec-9a3a-b8b83aae6223",
+      "invoiceNumber": "2026-00873",
       "items": [
         {
-          "productId": "9d4dfe7d-4711-4e25-8af3-0b6de1230da8",
-          "quantity": 2,
-          "unitPrice": 1.5
+          "articleId": "28da48ce-d1c1-41e3-94e0-e344b005add1",
+          "quantity": 30
         },
         {
-          "productId": "793284a1-b94c-402f-af93-78a19be5c1b6",
-          "quantity": 1,
-          "unitPrice": 130
+          "articleId": "75ae9e9d-8665-4997-a79a-79735e93e3c0",
+          "quantity": 20
         },
         {
-          "productId": "0625c2de-e84a-4675-ae7b-691de01057fb",
-          "quantity": 1,
-          "unitPrice": 320
+          "articleId": "ead6e609-8199-4efe-945e-9604163f5ad8",
+          "quantity": 15
         },
         {
-          "productId": "36cdc749-de11-4ddd-91a2-e0947b3aacd4",
-          "quantity": 3,
-          "unitPrice": 25
+          "articleId": "51a5d56d-17f1-4576-818e-c4b78e74d88e",
+          "quantity": 10
+        },
+        {
+          "articleId": "1462132e-5dda-40e9-a082-ed3510cd530e",
+          "quantity": 10
+        },
+        {
+          "articleId": "a7a8e8d0-bdb0-43af-a262-f4a655b675c6",
+          "quantity": 8
         }
       ]
     },
     {
-      "id": "f5d2bf7f-6ee2-4a22-a7a5-1290415beb3c",
-      "customerName": "Petar Petrović",
+      "id": "f86c2b7b-f7ac-4f95-846c-a03ea1315811",
+      "date": "2026-06-05",
+      "supplierId": "e9137397-45ab-4098-bf77-4f98b7baddf8",
+      "invoiceNumber": "UF-0431/26",
+      "items": [
+        {
+          "articleId": "6b66fe57-43e6-422d-8f62-b47a8c324256",
+          "quantity": 6
+        },
+        {
+          "articleId": "6539e923-327a-4e6d-9a17-0775c4792c57",
+          "quantity": 6
+        },
+        {
+          "articleId": "4bd0bd30-5f67-40b0-b570-e691bcd6c87e",
+          "quantity": 8
+        },
+        {
+          "articleId": "aff5b164-6e84-446d-99e7-cc3ec45a7a59",
+          "quantity": 5
+        },
+        {
+          "articleId": "6a61a169-d661-4464-be62-1cd424c62bde",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "id": "a7d098a8-17ed-4633-88b5-263860725a70",
+      "date": "2026-06-10",
+      "supplierId": "e8160520-3a93-4585-a2ca-ca6f784a7176",
+      "invoiceNumber": "112/2026",
+      "items": [
+        {
+          "articleId": "461b6da6-2711-4741-955f-c36a3f9f9e2e",
+          "quantity": 8
+        },
+        {
+          "articleId": "448c443a-a403-403f-b22e-0b573ee6c0a8",
+          "quantity": 6
+        },
+        {
+          "articleId": "9a38e78b-0aac-422b-84d1-64ad2a102af9",
+          "quantity": 40
+        },
+        {
+          "articleId": "209b8881-00e9-4747-bb06-cc44db1ad202",
+          "quantity": 30
+        },
+        {
+          "articleId": "ddc7aafb-f1a8-4b90-9e2b-86571013a29f",
+          "quantity": 25
+        },
+        {
+          "articleId": "7cb23e49-0c81-44e1-bf1f-f1f079d3a176",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": "aa460fda-0cb7-4320-b3a1-9080a834b27c",
+      "date": "2026-06-12",
+      "supplierId": "eb15fea2-3c35-447d-b145-53c28bef3f02",
+      "invoiceNumber": "LD-26-1540",
+      "items": [
+        {
+          "articleId": "895be46b-a45c-4467-a6ed-82160b7ae38c",
+          "quantity": 120
+        },
+        {
+          "articleId": "9deca408-b27b-4f59-863f-059cdc12a7d1",
+          "quantity": 80
+        },
+        {
+          "articleId": "f8f44767-5dd0-4a36-adf2-a2281941f358",
+          "quantity": 50
+        },
+        {
+          "articleId": "9962a022-1a2c-40d0-8e4b-811a915860d6",
+          "quantity": 60
+        }
+      ]
+    },
+    {
+      "id": "de5bea8b-1869-4829-a1f7-371553bc0bd1",
+      "date": "2026-06-15",
+      "supplierId": "b2f447bf-3243-45e9-93c0-d08d957fd549",
+      "invoiceNumber": "F-2026-0318",
+      "items": [
+        {
+          "articleId": "2130d2f6-07f7-499a-8c99-f33b1c46d2cb",
+          "quantity": 5
+        },
+        {
+          "articleId": "56d46d66-ee62-4683-a6a0-03afa0429866",
+          "quantity": 4
+        },
+        {
+          "articleId": "8598b01e-e6a0-4da3-8f63-b3ed9762de4f",
+          "quantity": 6
+        },
+        {
+          "articleId": "d83d6a0b-1bfe-4d22-9283-30a93d2645ab",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "id": "67fd5f6a-ef58-42f7-9726-357492f7d623",
+      "date": "2026-08-04",
+      "supplierId": "76070d1e-d71d-4fec-9a3a-b8b83aae6223",
+      "invoiceNumber": "2026-01422",
+      "items": [
+        {
+          "articleId": "28da48ce-d1c1-41e3-94e0-e344b005add1",
+          "quantity": 20
+        },
+        {
+          "articleId": "ead6e609-8199-4efe-945e-9604163f5ad8",
+          "quantity": 10
+        },
+        {
+          "articleId": "1462132e-5dda-40e9-a082-ed3510cd530e",
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "id": "5cf16351-cb63-4903-807d-11e280eff1e3",
       "date": "2026-09-01",
-      "status": "otkazana",
+      "supplierId": "eb15fea2-3c35-447d-b145-53c28bef3f02",
+      "invoiceNumber": "LD-26-2215",
       "items": [
         {
-          "productId": "2015811e-6218-44ff-a30b-05e96cb12bd7",
-          "quantity": 2,
-          "unitPrice": 18
+          "articleId": "895be46b-a45c-4467-a6ed-82160b7ae38c",
+          "quantity": 60
         },
         {
-          "productId": "1dcbafcf-adf2-4266-9f3a-b374d81e337b",
-          "quantity": 1,
-          "unitPrice": 480
-        },
-        {
-          "productId": "9d4dfe7d-4711-4e25-8af3-0b6de1230da8",
-          "quantity": 3,
-          "unitPrice": 1.5
-        },
-        {
-          "productId": "777751d2-0870-4902-8219-791279d599dd",
-          "quantity": 1,
-          "unitPrice": 32
-        }
-      ]
-    },
-    {
-      "customerName": "Nikola Nikolic",
-      "date": "2026-09-14",
-      "status": "u obradi",
-      "id": "W5_sOy6xGtg",
-      "items": [
-        {
-          "productId": "162f7ac8-0126-4329-b52d-82c9f9d9bc14",
-          "quantity": 3,
-          "unitPrice": 180
-        },
-        {
-          "productId": "743f3b94-a96e-4f54-893e-72c50e430f6b",
-          "quantity": 3,
-          "unitPrice": 1450
-        },
-        {
-          "productId": "6cbde423-f704-4788-9f2c-1bb97754364b",
-          "quantity": 3,
-          "unitPrice": 140
-        },
-        {
-          "productId": "1dcbafcf-adf2-4266-9f3a-b374d81e337b",
-          "quantity": 3,
-          "unitPrice": 480
-        }
-      ]
-    },
-    {
-      "id": "7ca7046a-4256-4819-8647-aea62e9e5a45",
-      "customerName": "Jovan Jovanović",
-      "date": "2026-01-01",
-      "status": "u obradi",
-      "items": [
-        {
-          "productId": "9306b042-2e79-4118-bb2f-203303916081",
-          "quantity": 1,
-          "unitPrice": 110
-        }
-      ]
-    },
-    {
-      "id": "0c3716a4-8f49-40f1-964c-67fd9e0d2470",
-      "customerName": "Stefan Stefanović",
-      "date": "2026-03-07",
-      "status": "otkazana",
-      "items": [
-        {
-          "productId": "9cfc9fa0-43e3-4fb2-acea-54fbb34fca32",
-          "quantity": 2,
-          "unitPrice": 8
-        }
-      ]
-    },
-    {
-      "id": "18aa9482-46f9-4727-8be5-d7ba379c3d2e",
-      "customerName": "Jelena Jovanović",
-      "date": "2026-04-10",
-      "status": "u obradi",
-      "items": [
-        {
-          "productId": "d4128bff-426b-496e-9713-29ba58b030f7",
-          "quantity": 2,
-          "unitPrice": 55
-        },
-        {
-          "productId": "a95ddc37-bc42-40b8-835b-de7040c68a12",
-          "quantity": 2,
-          "unitPrice": 350
-        }
-      ]
-    },
-    {
-      "id": "7d09b5a3-71c9-404e-a31b-110721144c9d",
-      "customerName": "Nemanja Nikolić",
-      "date": "2026-05-13",
-      "status": "završena",
-      "items": [
-        {
-          "productId": "3de927f8-0dd8-4848-a87d-63ee62865913",
-          "quantity": 1,
-          "unitPrice": 5
-        },
-        {
-          "productId": "0022b217-2d66-4780-b02f-6e2e98954ca9",
-          "quantity": 1,
-          "unitPrice": 150
-        },
-        {
-          "productId": "5e486646-fc7a-4d9b-91e3-10bfa95f6772",
-          "quantity": 2,
-          "unitPrice": 18
-        }
-      ]
-    },
-    {
-      "id": "4723f857-4c89-4289-93c4-723a7343bf32",
-      "customerName": "Tamara Popović",
-      "date": "2026-06-16",
-      "status": "otkazana",
-      "items": [
-        {
-          "productId": "9cfc9fa0-43e3-4fb2-acea-54fbb34fca32",
-          "quantity": 1,
-          "unitPrice": 8
-        },
-        {
-          "productId": "d4128bff-426b-496e-9713-29ba58b030f7",
-          "quantity": 3,
-          "unitPrice": 55
-        },
-        {
-          "productId": "18c992d8-0802-48a7-814e-b729a65b66cb",
-          "quantity": 1,
-          "unitPrice": 4
-        }
-      ]
-    },
-    {
-      "id": "b4ae397f-adfb-40ca-a362-b1bb7b8b5551",
-      "customerName": "Luka Lukić",
-      "date": "2026-07-19",
-      "status": "u obradi",
-      "items": [
-        {
-          "productId": "2bd6192f-4f7d-414f-afa6-4908788a9db8",
-          "quantity": 2,
-          "unitPrice": 620
-        }
-      ]
-    },
-    {
-      "id": "eb529e6c-2ae5-4219-9650-3d3ef28d41a1",
-      "customerName": "Sara Savić",
-      "date": "2026-08-22",
-      "status": "završena",
-      "items": [
-        {
-          "productId": "986f2da1-60d4-49a9-8419-feaf6529ce58",
-          "quantity": 2,
-          "unitPrice": 65
-        },
-        {
-          "productId": "c153842e-589b-4a41-8468-02fc199f6f44",
-          "quantity": 2,
-          "unitPrice": 35
-        },
-        {
-          "productId": "9cfc9fa0-43e3-4fb2-acea-54fbb34fca32",
-          "quantity": 3,
-          "unitPrice": 8
-        }
-      ]
-    },
-    {
-      "id": "7730f13c-cf75-4932-bb42-6c5c83254b7e",
-      "customerName": "Vuk Vukašinović",
-      "date": "2026-09-25",
-      "status": "otkazana",
-      "items": [
-        {
-          "productId": "0625c2de-e84a-4675-ae7b-691de01057fb",
-          "quantity": 2,
-          "unitPrice": 320
-        }
-      ]
-    },
-    {
-      "id": "0a65c0a4-28ed-4d5a-bdf8-0728c6c14e94",
-      "customerName": "Ivana Ivanović",
-      "date": "2026-01-28",
-      "status": "u obradi",
-      "items": [
-        {
-          "productId": "d4128bff-426b-496e-9713-29ba58b030f7",
-          "quantity": 3,
-          "unitPrice": 55
-        }
-      ]
-    },
-    {
-      "id": "4d504ace-c355-4b0b-9cb5-ba2a7f8b3169",
-      "customerName": "Aleksa Aleksić",
-      "date": "2026-02-03",
-      "status": "završena",
-      "items": [
-        {
-          "productId": "18c992d8-0802-48a7-814e-b729a65b66cb",
-          "quantity": 1,
-          "unitPrice": 4
-        },
-        {
-          "productId": "b2edd595-a74c-45ec-be42-33917ba80f00",
-          "quantity": 3,
-          "unitPrice": 40
-        },
-        {
-          "productId": "c7a83d3e-1432-4722-818b-8fd5a15f4902",
-          "quantity": 1,
-          "unitPrice": 12
-        },
-        {
-          "productId": "c153842e-589b-4a41-8468-02fc199f6f44",
-          "quantity": 2,
-          "unitPrice": 35
-        }
-      ]
-    },
-    {
-      "id": "26e86ef5-455a-4445-99f4-bdd7ec74b507",
-      "customerName": "Teodora Todorović",
-      "date": "2026-03-06",
-      "status": "otkazana",
-      "items": [
-        {
-          "productId": "2bd6192f-4f7d-414f-afa6-4908788a9db8",
-          "quantity": 3,
-          "unitPrice": 620
+          "articleId": "f8f44767-5dd0-4a36-adf2-a2281941f358",
+          "quantity": 20
         }
       ]
     }
   ],
-  "$schema": "./node_modules/json-server/schema.json"
+  "issues": [
+    {
+      "id": "a0b39a8c-e0ce-4ec5-892a-10c7a84914a2",
+      "date": "2026-06-18",
+      "invoiceNumber": "IF-0001/26",
+      "items": [
+        {
+          "articleId": "cf318325-08fe-42e4-8795-9d8681d53cff",
+          "quantity": 2
+        },
+        {
+          "articleId": "ebfd42aa-8b7e-4eb1-8ace-fa8fc826275d",
+          "quantity": 2
+        },
+        {
+          "articleId": "adbc3096-e7eb-431c-9ce7-f6ff62d1f681",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "6f951344-4b79-4690-997d-2f29c4717762",
+      "date": "2026-06-24",
+      "invoiceNumber": "IF-0002/26",
+      "items": [
+        {
+          "articleId": "28da48ce-d1c1-41e3-94e0-e344b005add1",
+          "quantity": 6
+        },
+        {
+          "articleId": "ead6e609-8199-4efe-945e-9604163f5ad8",
+          "quantity": 3
+        },
+        {
+          "articleId": "895be46b-a45c-4467-a6ed-82160b7ae38c",
+          "quantity": 20
+        },
+        {
+          "articleId": "9a38e78b-0aac-422b-84d1-64ad2a102af9",
+          "quantity": 8
+        }
+      ]
+    },
+    {
+      "id": "970bbf20-85b1-458d-9b41-41fbbf685ae3",
+      "date": "2026-07-02",
+      "invoiceNumber": "IF-0003/26",
+      "items": [
+        {
+          "articleId": "6b66fe57-43e6-422d-8f62-b47a8c324256",
+          "quantity": 2
+        },
+        {
+          "articleId": "4bd0bd30-5f67-40b0-b570-e691bcd6c87e",
+          "quantity": 2
+        },
+        {
+          "articleId": "aff5b164-6e84-446d-99e7-cc3ec45a7a59",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "42b8f39e-7819-444a-9d76-a58ec071ef37",
+      "date": "2026-07-09",
+      "invoiceNumber": "IF-0004/26",
+      "items": [
+        {
+          "articleId": "461b6da6-2711-4741-955f-c36a3f9f9e2e",
+          "quantity": 2
+        },
+        {
+          "articleId": "209b8881-00e9-4747-bb06-cc44db1ad202",
+          "quantity": 6
+        },
+        {
+          "articleId": "ddc7aafb-f1a8-4b90-9e2b-86571013a29f",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "id": "654a2b4b-a695-4f6b-85ec-7fbed34e667c",
+      "date": "2026-07-16",
+      "invoiceNumber": "IF-0005/26",
+      "items": [
+        {
+          "articleId": "2130d2f6-07f7-499a-8c99-f33b1c46d2cb",
+          "quantity": 1
+        },
+        {
+          "articleId": "8598b01e-e6a0-4da3-8f63-b3ed9762de4f",
+          "quantity": 1
+        },
+        {
+          "articleId": "9deca408-b27b-4f59-863f-059cdc12a7d1",
+          "quantity": 16
+        },
+        {
+          "articleId": "f8f44767-5dd0-4a36-adf2-a2281941f358",
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "id": "62b68d1b-4850-4ad4-be96-839199ac1b64",
+      "date": "2026-07-28",
+      "invoiceNumber": "IF-0006/26",
+      "items": [
+        {
+          "articleId": "2a911e34-83dc-42b2-94de-a85601f6dcec",
+          "quantity": 5
+        },
+        {
+          "articleId": "82e1b652-0b1d-41c9-8eac-9aa8ccf016be",
+          "quantity": 2
+        },
+        {
+          "articleId": "adbc3096-e7eb-431c-9ce7-f6ff62d1f681",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": "69ddf7d3-50f9-4938-ad5e-551e5c65e0e6",
+      "date": "2026-08-06",
+      "invoiceNumber": "IF-0007/26",
+      "items": [
+        {
+          "articleId": "28da48ce-d1c1-41e3-94e0-e344b005add1",
+          "quantity": 12
+        },
+        {
+          "articleId": "75ae9e9d-8665-4997-a79a-79735e93e3c0",
+          "quantity": 8
+        },
+        {
+          "articleId": "51a5d56d-17f1-4576-818e-c4b78e74d88e",
+          "quantity": 4
+        },
+        {
+          "articleId": "1462132e-5dda-40e9-a082-ed3510cd530e",
+          "quantity": 5
+        },
+        {
+          "articleId": "a7a8e8d0-bdb0-43af-a262-f4a655b675c6",
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "id": "3af3c87f-56bc-46ad-88f4-a1b9ae89f224",
+      "date": "2026-08-14",
+      "invoiceNumber": "IF-0008/26",
+      "items": [
+        {
+          "articleId": "9a38e78b-0aac-422b-84d1-64ad2a102af9",
+          "quantity": 20
+        },
+        {
+          "articleId": "895be46b-a45c-4467-a6ed-82160b7ae38c",
+          "quantity": 40
+        },
+        {
+          "articleId": "9962a022-1a2c-40d0-8e4b-811a915860d6",
+          "quantity": 15
+        }
+      ]
+    },
+    {
+      "id": "8839d7fc-0320-483a-b44a-f3013a01fd8a",
+      "date": "2026-08-21",
+      "invoiceNumber": "IF-0009/26",
+      "items": [
+        {
+          "articleId": "6539e923-327a-4e6d-9a17-0775c4792c57",
+          "quantity": 2
+        },
+        {
+          "articleId": "6a61a169-d661-4464-be62-1cd424c62bde",
+          "quantity": 1
+        },
+        {
+          "articleId": "6b66fe57-43e6-422d-8f62-b47a8c324256",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": "d61bb887-5296-4492-a921-ebb0aad2cfe8",
+      "date": "2026-09-03",
+      "invoiceNumber": "IF-0010/26",
+      "items": [
+        {
+          "articleId": "9deca408-b27b-4f59-863f-059cdc12a7d1",
+          "quantity": 36
+        },
+        {
+          "articleId": "f8f44767-5dd0-4a36-adf2-a2281941f358",
+          "quantity": 12
+        },
+        {
+          "articleId": "56d46d66-ee62-4683-a6a0-03afa0429866",
+          "quantity": 2
+        },
+        {
+          "articleId": "d83d6a0b-1bfe-4d22-9283-30a93d2645ab",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "f86d26c1-9330-4e23-8736-68d2b15f1f7a",
+      "date": "2026-09-11",
+      "invoiceNumber": "IF-0011/26",
+      "items": [
+        {
+          "articleId": "cf318325-08fe-42e4-8795-9d8681d53cff",
+          "quantity": 3
+        },
+        {
+          "articleId": "ebfd42aa-8b7e-4eb1-8ace-fa8fc826275d",
+          "quantity": 4
+        },
+        {
+          "articleId": "448c443a-a403-403f-b22e-0b573ee6c0a8",
+          "quantity": 3
+        },
+        {
+          "articleId": "209b8881-00e9-4747-bb06-cc44db1ad202",
+          "quantity": 8
+        }
+      ]
+    },
+    {
+      "id": "2ca50239-ee9c-4b93-8a98-9d9f39b56a30",
+      "date": "2026-09-22",
+      "invoiceNumber": "IF-0012/26",
+      "items": [
+        {
+          "articleId": "28da48ce-d1c1-41e3-94e0-e344b005add1",
+          "quantity": 10
+        },
+        {
+          "articleId": "ead6e609-8199-4efe-945e-9604163f5ad8",
+          "quantity": 6
+        },
+        {
+          "articleId": "895be46b-a45c-4467-a6ed-82160b7ae38c",
+          "quantity": 50
+        },
+        {
+          "articleId": "9962a022-1a2c-40d0-8e4b-811a915860d6",
+          "quantity": 30
+        }
+      ]
+    }
+  ]
 }

@@ -7,6 +7,6 @@
     "start": "json-server --port 3005 db.json"
   },
   "devDependencies": {
-    "json-server": "^1.0.0-beta.15"
+    "json-server": "1.0.0-beta.15"
   }
 }

@@ -1,12 +1,13 @@
 import chevronRight from "../../assets/icons/chevron-right.svg";
+import { getEntityId } from "../entityId";
 import { renderFieldValue } from "../formatFieldValue";
-import type { EntityConfig, SortOption } from "../types";
+import type { EntityConfig, EntityId, SortOption } from "../types";
 import { Icon } from "./Icon";
 
 interface DataTableProps<T> {
   items: T[];
   config: EntityConfig<T>;
-  selectedId?: string | number;
+  selectedId?: EntityId;
   sort?: SortOption<T> | null;
   onSortChange?: (field: keyof T) => void;
   onRowClick?: (item: T, event: React.MouseEvent<HTMLTableRowElement>) => void;
@@ -71,7 +72,7 @@ export const DataTable = <T,>({
         </thead>
         <tbody>
           {items.map((item) => {
-            const id = item[config.idField] as unknown as string | number;
+            const id = getEntityId(item, config.idField);
             const isSelected = id === selectedId;
 
             return (

@@ -1,14 +1,16 @@
 import { useState } from "react";
+import { getEntityId } from "../entityId";
 import { useCrud } from "../useCrud";
 import type { CrudService, EntityConfig } from "../types";
 import { DataTable } from "./DataTable";
 import { DetailPanel } from "./DetailPanel";
 import { EntityForm } from "./EntityForm";
+import { FilterBar } from "./FilterBar";
 import { ItemList } from "./ItemList";
 import { Modal } from "./Modal";
 import { Paginator } from "./Paginator";
 
-interface CrudComponentProps<T extends { id: string | number }> {
+interface CrudComponentProps<T> {
   service: CrudService<T>;
   config: EntityConfig<T>;
   viewMode?: "table" | "master-detail";
@@ -16,7 +18,7 @@ interface CrudComponentProps<T extends { id: string | number }> {
   defaultPageSize?: number;
 }
 
-export const CrudComponent = <T extends { id: string | number }>({
+export const CrudComponent = <T,>({
   service,
   config,
   viewMode = "table",
@@ -32,41 +34,70 @@ export const CrudComponent = <T extends { id: string | number }>({
     page,
     perPage,
     totalPages,
+    filter,
     select,
+    setFilter,
     setSort,
     setSortOption,
     setPage,
     setPerPage,
+    clearError,
     create,
     update,
     remove,
-  } = useCrud(service, { defaultPerPage: defaultPageSize });
+  } = useCrud(service, { idField: config.idField, defaultPerPage: defaultPageSize });
+
+  const getId = (item: T) => getEntityId(item, config.idField);
+  const hasFilters = config.fields.some((field) => field.searchable || field.filterable);
 
   const [isAddOpen, setIsAddOpen] = useState(false);
   const [editingItem, setEditingItem] = useState<T | null>(null);
   const [deletingItem, setDeletingItem] = useState<T | null>(null);
+  const [isDeleting, setIsDeleting] = useState(false);
 
-  const handleAddSubmit = (data: Partial<T>) => {
-    create(data as Omit<T, "id">);
-    setIsAddOpen(false);
+  // Clear any previous error so a modal only shows errors from its own operation.
+  const openAdd = () => {
+    clearError();
+    setIsAddOpen(true);
   };
 
-  const handleEditSubmit = (data: Partial<T>) => {
-    if (editingItem) {
-      update(editingItem.id, data);
-    }
-    setEditingItem(null);
+  const openEdit = (item: T) => {
+    clearError();
+    setEditingItem(item);
   };
 
-  const handleConfirmDelete = () => {
-    if (deletingItem) {
-      remove(deletingItem.id);
+  const openDelete = (item: T) => {
+    clearError();
+    setDeletingItem(item);
+  };
+
+  // Modals close only after a successful operation, so the user's input is kept on error.
+  const handleAddSubmit = async (data: Partial<T>) => {
+    if (await create(data)) {
+      setIsAddOpen(false);
     }
-    setDeletingItem(null);
+  };
+
+  const handleEditSubmit = async (data: Partial<T>) => {
+    if (editingItem && (await update(getId(editingItem), data))) {
+      setEditingItem(null);
+    }
+  };
+
+  const handleConfirmDelete = async () => {
+    if (!deletingItem || isDeleting) {
+      return;
+    }
+    setIsDeleting(true);
+    const success = await remove(getId(deletingItem));
+    setIsDeleting(false);
+    if (success) {
+      setDeletingItem(null);
+    }
   };
 
   const handleItemClick = (item: T, event: React.MouseEvent) => {
-    if (event.ctrlKey && selectedItem?.id === item.id) {
+    if (event.ctrlKey && selectedItem && getId(selectedItem) === getId(item)) {
       select(null);
     } else {
       select(item);
@@ -79,12 +110,14 @@ export const CrudComponent = <T extends { id: string | number }>({
         <h2 className="text-xl font-semibold text-gray-800">{config.label}</h2>
         <button
           type="button"
-          onClick={() => setIsAddOpen(true)}
+          onClick={openAdd}
           className="rounded-full bg-sky-600 px-4 py-2 text-sm font-medium text-white hover:bg-sky-700"
         >
           Dodaj
         </button>
       </div>
+
+      {hasFilters && <FilterBar config={config} filter={filter} onFilterChange={setFilter} />}
 
       {loading && <p className="text-sm text-gray-500">Učitavanje...</p>}
       {error && (
@@ -99,7 +132,7 @@ export const CrudComponent = <T extends { id: string | number }>({
             <ItemList
               items={items}
               config={config}
-              selectedId={selectedItem?.id}
+              selectedId={selectedItem ? getId(selectedItem) : undefined}
               sort={sort}
               onSortChange={setSortOption}
               onItemClick={handleItemClick}
@@ -118,11 +151,11 @@ export const CrudComponent = <T extends { id: string | number }>({
 
           {selectedItem ? (
             <DetailPanel
-              key={selectedItem.id}
+              key={getId(selectedItem)}
               item={selectedItem}
               config={config}
-              onUpdate={(data) => update(selectedItem.id, data)}
-              onDelete={(item) => setDeletingItem(item)}
+              onUpdate={(data) => update(getId(selectedItem), data)}
+              onDelete={openDelete}
             />
           ) : (
             <div className="flex min-h-40 items-center justify-center rounded-lg border border-dashed border-gray-300 bg-white p-6 text-center text-sm text-gray-500">
@@ -137,8 +170,8 @@ export const CrudComponent = <T extends { id: string | number }>({
             config={config}
             sort={sort}
             onSortChange={setSort}
-            onEdit={(item) => setEditingItem(item)}
-            onDelete={(item) => setDeletingItem(item)}
+            onEdit={openEdit}
+            onDelete={openDelete}
           />
 
           <Paginator
@@ -154,7 +187,12 @@ export const CrudComponent = <T extends { id: string | number }>({
 
       {isAddOpen && (
         <Modal title="Novi unos" onClose={() => setIsAddOpen(false)}>
-          <EntityForm config={config} onSubmit={handleAddSubmit} onCancel={() => setIsAddOpen(false)} />
+          <EntityForm
+            config={config}
+            onSubmit={handleAddSubmit}
+            onCancel={() => setIsAddOpen(false)}
+            submitError={error}
+          />
         </Modal>
       )}
 
@@ -165,6 +203,7 @@ export const CrudComponent = <T extends { id: string | number }>({
             initialValues={editingItem}
             onSubmit={handleEditSubmit}
             onCancel={() => setEditingItem(null)}
+            submitError={error}
           />
         </Modal>
       )}
@@ -174,13 +213,19 @@ export const CrudComponent = <T extends { id: string | number }>({
           <p className="text-sm text-gray-600">
             Da li ste sigurni da želite da obrišete ovu stavku?
           </p>
+          {error && (
+            <p role="alert" className="mt-3 rounded-md bg-red-50 px-3 py-2 text-sm text-red-600">
+              {error}
+            </p>
+          )}
           <div className="mt-4 flex gap-2">
             <button
               type="button"
               onClick={handleConfirmDelete}
-              className="rounded-full bg-red-600 px-4 py-2 text-sm font-medium text-white hover:bg-red-700"
+              disabled={isDeleting}
+              className="rounded-full bg-red-600 px-4 py-2 text-sm font-medium text-white hover:bg-red-700 disabled:cursor-not-allowed disabled:opacity-60"
             >
-              Obriši
+              {isDeleting ? "Brisanje..." : "Obriši"}
             </button>
             <button
               type="button"

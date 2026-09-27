@@ -1,13 +1,14 @@
 import { Fragment } from "react";
 import chevronRight from "../../assets/icons/chevron-right.svg";
+import { getEntityId } from "../entityId";
 import { renderFieldValue } from "../formatFieldValue";
-import type { EntityConfig, SortOption } from "../types";
+import type { EntityConfig, EntityId, SortOption } from "../types";
 import { Icon } from "./Icon";
 
 interface ItemListProps<T> {
   items: T[];
   config: EntityConfig<T>;
-  selectedId?: string | number;
+  selectedId?: EntityId;
   sort?: SortOption<T> | null;
   onSortChange?: (sort: SortOption<T> | null) => void;
   onItemClick?: (item: T, event: React.MouseEvent<HTMLButtonElement>) => void;
@@ -80,7 +81,7 @@ export const ItemList = <T,>({
       ) : (
         <ul className="min-h-0 flex-1 overflow-y-auto">
           {items.map((item) => {
-            const id = item[config.idField] as unknown as string | number;
+            const id = getEntityId(item, config.idField);
             const isSelected = id === selectedId;
 
             return (

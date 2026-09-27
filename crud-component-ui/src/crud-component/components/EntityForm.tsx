@@ -4,15 +4,24 @@ import type { EntityConfig, FieldConfig } from "../types";
 interface EntityFormProps<T> {
   config: EntityConfig<T>;
   initialValues?: Partial<T>;
-  onSubmit: (data: Partial<T>) => void;
+  onSubmit: (data: Partial<T>) => void | Promise<void>;
   onCancel?: () => void;
+  // Error reported by the save operation itself (e.g. a server error), shown above the buttons.
+  submitError?: string | null;
 }
 
 type FormErrors<T> = Partial<Record<keyof T, string>>;
 
-export const EntityForm = <T,>({ config, initialValues, onSubmit, onCancel }: EntityFormProps<T>) => {
+export const EntityForm = <T,>({
+  config,
+  initialValues,
+  onSubmit,
+  onCancel,
+  submitError,
+}: EntityFormProps<T>) => {
   const [values, setValues] = useState<Partial<T>>(initialValues ?? {});
   const [errors, setErrors] = useState<FormErrors<T>>({});
+  const [submitting, setSubmitting] = useState(false);
 
   const editableFields = config.fields.filter((field) => field.editable);
 
@@ -24,31 +33,48 @@ export const EntityForm = <T,>({ config, initialValues, onSubmit, onCancel }: En
     setValues((prev) => ({ ...prev, [field.key]: parsedValue }));
   };
 
-  const validateAll = (): boolean => {
-    const nextErrors: FormErrors<T> = {};
+  const validateField = async (field: FieldConfig<T>): Promise<string | undefined> => {
+    const value = values[field.key];
 
-    for (const field of editableFields) {
-      const value = values[field.key];
-
-      if (field.required && (value === undefined || value === null || value === "")) {
-        nextErrors[field.key] = `${field.label} je obavezno polje.`;
-        continue;
-      }
-
-      const customError = field.validate?.(value, values);
-      if (customError) {
-        nextErrors[field.key] = customError;
-      }
+    if (field.required && (value === undefined || value === null || value === "")) {
+      return `${field.label} je obavezno polje.`;
     }
+
+    try {
+      return await field.validate?.(value, values);
+    } catch {
+      return "Provjera vrijednosti nije uspjela. Pokušajte ponovo.";
+    }
+  };
+
+  // Validators may be asynchronous (e.g. checks against the server), so all of them run in parallel.
+  const validateAll = async (): Promise<boolean> => {
+    const results = await Promise.all(editableFields.map(validateField));
+
+    const nextErrors: FormErrors<T> = {};
+    editableFields.forEach((field, index) => {
+      const error = results[index];
+      if (error) {
+        nextErrors[field.key] = error;
+      }
+    });
 
     setErrors(nextErrors);
     return Object.keys(nextErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (validateAll()) {
-      onSubmit(values);
+    if (submitting) {
+      return;
+    }
+    setSubmitting(true);
+    try {
+      if (await validateAll()) {
+        await onSubmit(values);
+      }
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -120,12 +146,19 @@ export const EntityForm = <T,>({ config, initialValues, onSubmit, onCancel }: En
         );
       })}
 
+      {submitError && (
+        <p role="alert" className="rounded-md bg-red-50 px-3 py-2 text-sm text-red-600">
+          {submitError}
+        </p>
+      )}
+
       <div className="flex gap-2 pt-2">
         <button
           type="submit"
-          className="rounded-full bg-sky-600 px-4 py-2 text-sm font-medium text-white hover:bg-sky-700"
+          disabled={submitting}
+          className="rounded-full bg-sky-600 px-4 py-2 text-sm font-medium text-white hover:bg-sky-700 disabled:cursor-not-allowed disabled:opacity-60"
         >
-          Sačuvaj
+          {submitting ? "Čuvanje..." : "Sačuvaj"}
         </button>
         {onCancel && (
           <button

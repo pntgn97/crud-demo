@@ -6,7 +6,8 @@ import { EntityForm } from "./EntityForm";
 interface DetailPanelProps<T> {
   item: T;
   config: EntityConfig<T>;
-  onUpdate?: (data: Partial<T>) => void;
+  // Returns whether the update succeeded; the edit form stays open on failure.
+  onUpdate?: (data: Partial<T>) => boolean | Promise<boolean>;
   onDelete?: (item: T) => void;
 }
 
@@ -20,9 +21,10 @@ export const DetailPanel = <T,>({ item, config, onUpdate, onDelete }: DetailPane
         <EntityForm
           config={config}
           initialValues={item}
-          onSubmit={(data) => {
-            onUpdate?.(data);
-            setIsEditing(false);
+          onSubmit={async (data) => {
+            if (onUpdate && (await onUpdate(data))) {
+              setIsEditing(false);
+            }
           }}
           onCancel={() => setIsEditing(false)}
         />
