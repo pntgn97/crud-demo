@@ -1,0 +1,12 @@
+{
+  "name": "crud-component-mock-api",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "json-server --port 3005 db.json"
+  },
+  "devDependencies": {
+    "json-server": "^1.0.0-beta.15"
+  }
+}

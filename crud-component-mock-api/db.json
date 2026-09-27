@@ -1,0 +1,565 @@
+{
+  "categories": [
+    {
+      "id": "56d17309-9754-442d-8652-d96514ba6372",
+      "name": "Elektronika",
+      "description": "Elektronski uređaji i oprema"
+    },
+    {
+      "id": "94cc7c78-8acb-47c9-ace6-1d3fab5198aa",
+      "name": "Kancelarijski materijal",
+      "description": "Pribor za rad u kancelariji"
+    },
+    {
+      "id": "4df92b68-2480-4f00-af5c-a55378f9e306",
+      "name": "Namještaj",
+      "description": "Kancelarijski i kućni namještaj"
+    },
+    {
+      "id": "47a5a3f5-987e-4e3a-83d9-e21f8b761e7e",
+      "name": "Sportska oprema",
+      "description": "Oprema za rekreaciju i sport"
+    },
+    {
+      "id": "ec2d7a25-5ae9-44c5-92e6-c3581229fda4",
+      "name": "Kuhinjski aparati",
+      "description": "Aparati za pripremu hrane i pića"
+    }
+  ],
+  "products": [
+    {
+      "id": "743f3b94-a96e-4f54-893e-72c50e430f6b",
+      "name": "Laptop Lenovo ThinkPad",
+      "price": 1450,
+      "quantity": 12,
+      "categoryId": "56d17309-9754-442d-8652-d96514ba6372"
+    },
+    {
+      "id": "36cdc749-de11-4ddd-91a2-e0947b3aacd4",
+      "name": "Bežični miš",
+      "price": 25,
+      "quantity": 80,
+      "categoryId": "56d17309-9754-442d-8652-d96514ba6372"
+    },
+    {
+      "id": "9d4dfe7d-4711-4e25-8af3-0b6de1230da8",
+      "name": "Hemijska olovka",
+      "price": 1.5,
+      "quantity": 500,
+      "categoryId": "94cc7c78-8acb-47c9-ace6-1d3fab5198aa"
+    },
+    {
+      "id": "2368d15e-3c3c-4705-9c8b-de68f4b96775",
+      "name": "Sveska A4",
+      "price": 3,
+      "quantity": 200,
+      "categoryId": "94cc7c78-8acb-47c9-ace6-1d3fab5198aa"
+    },
+    {
+      "id": "162f7ac8-0126-4329-b52d-82c9f9d9bc14",
+      "name": "Kancelarijska stolica",
+      "price": 180,
+      "quantity": 30,
+      "categoryId": "4df92b68-2480-4f00-af5c-a55378f9e306"
+    },
+    {
+      "id": "92d2819f-0e9c-4cef-95ff-9365059ba21d",
+      "name": "Radni sto",
+      "price": 320,
+      "quantity": 15,
+      "categoryId": "4df92b68-2480-4f00-af5c-a55378f9e306"
+    },
+    {
+      "id": "0625c2de-e84a-4675-ae7b-691de01057fb",
+      "name": "Monitor Dell 27\"",
+      "price": 320,
+      "quantity": 18,
+      "categoryId": "56d17309-9754-442d-8652-d96514ba6372"
+    },
+    {
+      "id": "fad8c829-1627-487d-9945-9630e9fc4193",
+      "name": "Mehanička tastatura",
+      "price": 95,
+      "quantity": 40,
+      "categoryId": "56d17309-9754-442d-8652-d96514ba6372"
+    },
+    {
+      "id": "c153842e-589b-4a41-8468-02fc199f6f44",
+      "name": "USB-C Hub",
+      "price": 35,
+      "quantity": 60,
+      "categoryId": "56d17309-9754-442d-8652-d96514ba6372"
+    },
+    {
+      "id": "d4128bff-426b-496e-9713-29ba58b030f7",
+      "name": "Web kamera Full HD",
+      "price": 55,
+      "quantity": 25,
+      "categoryId": "56d17309-9754-442d-8652-d96514ba6372"
+    },
+    {
+      "id": "22c7ba07-7a1f-4a16-8cbd-e6939baa76e1",
+      "name": "Slušalice sa mikrofonom",
+      "price": 70,
+      "quantity": 50,
+      "categoryId": "56d17309-9754-442d-8652-d96514ba6372"
+    },
+    {
+      "id": "9306b042-2e79-4118-bb2f-203303916081",
+      "name": "Prenosivi SSD 1TB",
+      "price": 110,
+      "quantity": 22,
+      "categoryId": "56d17309-9754-442d-8652-d96514ba6372"
+    },
+    {
+      "id": "b2edd595-a74c-45ec-be42-33917ba80f00",
+      "name": "Punjač za laptop",
+      "price": 40,
+      "quantity": 33,
+      "categoryId": "56d17309-9754-442d-8652-d96514ba6372"
+    },
+    {
+      "id": "0022b217-2d66-4780-b02f-6e2e98954ca9",
+      "name": "Docking stanica",
+      "price": 150,
+      "quantity": 10,
+      "categoryId": "56d17309-9754-442d-8652-d96514ba6372"
+    },
+    {
+      "id": "18c992d8-0802-48a7-814e-b729a65b66cb",
+      "name": "Fascikla za dokumenta",
+      "price": 4,
+      "quantity": 300,
+      "categoryId": "94cc7c78-8acb-47c9-ace6-1d3fab5198aa"
+    },
+    {
+      "id": "9cfc9fa0-43e3-4fb2-acea-54fbb34fca32",
+      "name": "Markeri u boji (set)",
+      "price": 8,
+      "quantity": 150,
+      "categoryId": "94cc7c78-8acb-47c9-ace6-1d3fab5198aa"
+    },
+    {
+      "id": "c7a83d3e-1432-4722-818b-8fd5a15f4902",
+      "name": "Klamerica",
+      "price": 12,
+      "quantity": 90,
+      "categoryId": "94cc7c78-8acb-47c9-ace6-1d3fab5198aa"
+    },
+    {
+      "id": "9d2f433e-9d7c-4970-8abb-6400ed41b6a6",
+      "name": "Papir za štampač A4 (rizma)",
+      "price": 6,
+      "quantity": 220,
+      "categoryId": "94cc7c78-8acb-47c9-ace6-1d3fab5198aa"
+    },
+    {
+      "id": "5e486646-fc7a-4d9b-91e3-10bfa95f6772",
+      "name": "Organizator za sto",
+      "price": 18,
+      "quantity": 45,
+      "categoryId": "94cc7c78-8acb-47c9-ace6-1d3fab5198aa"
+    },
+    {
+      "id": "3de927f8-0dd8-4848-a87d-63ee62865913",
+      "name": "Bilježnica sa spiralom",
+      "price": 5,
+      "quantity": 180,
+      "categoryId": "94cc7c78-8acb-47c9-ace6-1d3fab5198aa"
+    },
+    {
+      "id": "777751d2-0870-4902-8219-791279d599dd",
+      "name": "Kancelarijska lampa",
+      "price": 32,
+      "quantity": 28,
+      "categoryId": "94cc7c78-8acb-47c9-ace6-1d3fab5198aa"
+    },
+    {
+      "id": "5207c517-d518-402d-8733-eb20c207c216",
+      "name": "Ormar za dokumenta",
+      "price": 210,
+      "quantity": 8,
+      "categoryId": "4df92b68-2480-4f00-af5c-a55378f9e306"
+    },
+    {
+      "id": "f1264cc6-2830-40b0-b549-b8c7c25df324",
+      "name": "Polica za knjige",
+      "price": 95,
+      "quantity": 20,
+      "categoryId": "4df92b68-2480-4f00-af5c-a55378f9e306"
+    },
+    {
+      "id": "6cbde423-f704-4788-9f2c-1bb97754364b",
+      "name": "Fotelja za čekaonicu",
+      "price": 140,
+      "quantity": 12,
+      "categoryId": "4df92b68-2480-4f00-af5c-a55378f9e306"
+    },
+    {
+      "id": "1dcbafcf-adf2-4266-9f3a-b374d81e337b",
+      "name": "Konferencijski sto",
+      "price": 480,
+      "quantity": 5,
+      "categoryId": "4df92b68-2480-4f00-af5c-a55378f9e306"
+    },
+    {
+      "id": "8712cb96-0a0f-4b0f-863d-83e857740950",
+      "name": "Lopta za fudbal",
+      "price": 22,
+      "quantity": 60,
+      "categoryId": "47a5a3f5-987e-4e3a-83d9-e21f8b761e7e"
+    },
+    {
+      "id": "2015811e-6218-44ff-a30b-05e96cb12bd7",
+      "name": "Uteg 5kg",
+      "price": 18,
+      "quantity": 40,
+      "categoryId": "47a5a3f5-987e-4e3a-83d9-e21f8b761e7e"
+    },
+    {
+      "id": "a95ddc37-bc42-40b8-835b-de7040c68a12",
+      "name": "Traka za trčanje",
+      "price": 350,
+      "quantity": 6,
+      "categoryId": "47a5a3f5-987e-4e3a-83d9-e21f8b761e7e"
+    },
+    {
+      "id": "2bd6192f-4f7d-414f-afa6-4908788a9db8",
+      "name": "Bicikl brdski",
+      "price": 620,
+      "quantity": 4,
+      "categoryId": "47a5a3f5-987e-4e3a-83d9-e21f8b761e7e"
+    },
+    {
+      "id": "fb2c611a-ba41-4588-97e5-d6bfe80deba9",
+      "name": "Aparat za kafu",
+      "price": 180,
+      "quantity": 15,
+      "categoryId": "ec2d7a25-5ae9-44c5-92e6-c3581229fda4"
+    },
+    {
+      "id": "986f2da1-60d4-49a9-8419-feaf6529ce58",
+      "name": "Blender",
+      "price": 65,
+      "quantity": 25,
+      "categoryId": "ec2d7a25-5ae9-44c5-92e6-c3581229fda4"
+    },
+    {
+      "id": "6ea9bf4b-4160-41ef-9088-1bf051296ddf",
+      "name": "Toster",
+      "price": 45,
+      "quantity": 30,
+      "categoryId": "ec2d7a25-5ae9-44c5-92e6-c3581229fda4"
+    },
+    {
+      "id": "793284a1-b94c-402f-af93-78a19be5c1b6",
+      "name": "Mikrotalasna rerna",
+      "price": 130,
+      "quantity": 10,
+      "categoryId": "ec2d7a25-5ae9-44c5-92e6-c3581229fda4"
+    }
+  ],
+  "orders": [
+    {
+      "id": "e6106b44-9456-4bb1-87df-552b78828284",
+      "customerName": "Marko Marković",
+      "date": "2026-08-10",
+      "status": "završena",
+      "items": [
+        {
+          "productId": "d4128bff-426b-496e-9713-29ba58b030f7",
+          "quantity": 3,
+          "unitPrice": 55
+        },
+        {
+          "productId": "9d2f433e-9d7c-4970-8abb-6400ed41b6a6",
+          "quantity": 2,
+          "unitPrice": 6
+        },
+        {
+          "productId": "793284a1-b94c-402f-af93-78a19be5c1b6",
+          "quantity": 3,
+          "unitPrice": 130
+        }
+      ]
+    },
+    {
+      "id": "b50091a4-712a-4447-8784-03505c807b45",
+      "customerName": "Ana Anić",
+      "date": "2026-08-22",
+      "status": "u obradi",
+      "items": [
+        {
+          "productId": "9d4dfe7d-4711-4e25-8af3-0b6de1230da8",
+          "quantity": 2,
+          "unitPrice": 1.5
+        },
+        {
+          "productId": "793284a1-b94c-402f-af93-78a19be5c1b6",
+          "quantity": 1,
+          "unitPrice": 130
+        },
+        {
+          "productId": "0625c2de-e84a-4675-ae7b-691de01057fb",
+          "quantity": 1,
+          "unitPrice": 320
+        },
+        {
+          "productId": "36cdc749-de11-4ddd-91a2-e0947b3aacd4",
+          "quantity": 3,
+          "unitPrice": 25
+        }
+      ]
+    },
+    {
+      "id": "f5d2bf7f-6ee2-4a22-a7a5-1290415beb3c",
+      "customerName": "Petar Petrović",
+      "date": "2026-09-01",
+      "status": "otkazana",
+      "items": [
+        {
+          "productId": "2015811e-6218-44ff-a30b-05e96cb12bd7",
+          "quantity": 2,
+          "unitPrice": 18
+        },
+        {
+          "productId": "1dcbafcf-adf2-4266-9f3a-b374d81e337b",
+          "quantity": 1,
+          "unitPrice": 480
+        },
+        {
+          "productId": "9d4dfe7d-4711-4e25-8af3-0b6de1230da8",
+          "quantity": 3,
+          "unitPrice": 1.5
+        },
+        {
+          "productId": "777751d2-0870-4902-8219-791279d599dd",
+          "quantity": 1,
+          "unitPrice": 32
+        }
+      ]
+    },
+    {
+      "customerName": "Nikola Nikolic",
+      "date": "2026-09-14",
+      "status": "u obradi",
+      "id": "W5_sOy6xGtg",
+      "items": [
+        {
+          "productId": "162f7ac8-0126-4329-b52d-82c9f9d9bc14",
+          "quantity": 3,
+          "unitPrice": 180
+        },
+        {
+          "productId": "743f3b94-a96e-4f54-893e-72c50e430f6b",
+          "quantity": 3,
+          "unitPrice": 1450
+        },
+        {
+          "productId": "6cbde423-f704-4788-9f2c-1bb97754364b",
+          "quantity": 3,
+          "unitPrice": 140
+        },
+        {
+          "productId": "1dcbafcf-adf2-4266-9f3a-b374d81e337b",
+          "quantity": 3,
+          "unitPrice": 480
+        }
+      ]
+    },
+    {
+      "id": "7ca7046a-4256-4819-8647-aea62e9e5a45",
+      "customerName": "Jovan Jovanović",
+      "date": "2026-01-01",
+      "status": "u obradi",
+      "items": [
+        {
+          "productId": "9306b042-2e79-4118-bb2f-203303916081",
+          "quantity": 1,
+          "unitPrice": 110
+        }
+      ]
+    },
+    {
+      "id": "0c3716a4-8f49-40f1-964c-67fd9e0d2470",
+      "customerName": "Stefan Stefanović",
+      "date": "2026-03-07",
+      "status": "otkazana",
+      "items": [
+        {
+          "productId": "9cfc9fa0-43e3-4fb2-acea-54fbb34fca32",
+          "quantity": 2,
+          "unitPrice": 8
+        }
+      ]
+    },
+    {
+      "id": "18aa9482-46f9-4727-8be5-d7ba379c3d2e",
+      "customerName": "Jelena Jovanović",
+      "date": "2026-04-10",
+      "status": "u obradi",
+      "items": [
+        {
+          "productId": "d4128bff-426b-496e-9713-29ba58b030f7",
+          "quantity": 2,
+          "unitPrice": 55
+        },
+        {
+          "productId": "a95ddc37-bc42-40b8-835b-de7040c68a12",
+          "quantity": 2,
+          "unitPrice": 350
+        }
+      ]
+    },
+    {
+      "id": "7d09b5a3-71c9-404e-a31b-110721144c9d",
+      "customerName": "Nemanja Nikolić",
+      "date": "2026-05-13",
+      "status": "završena",
+      "items": [
+        {
+          "productId": "3de927f8-0dd8-4848-a87d-63ee62865913",
+          "quantity": 1,
+          "unitPrice": 5
+        },
+        {
+          "productId": "0022b217-2d66-4780-b02f-6e2e98954ca9",
+          "quantity": 1,
+          "unitPrice": 150
+        },
+        {
+          "productId": "5e486646-fc7a-4d9b-91e3-10bfa95f6772",
+          "quantity": 2,
+          "unitPrice": 18
+        }
+      ]
+    },
+    {
+      "id": "4723f857-4c89-4289-93c4-723a7343bf32",
+      "customerName": "Tamara Popović",
+      "date": "2026-06-16",
+      "status": "otkazana",
+      "items": [
+        {
+          "productId": "9cfc9fa0-43e3-4fb2-acea-54fbb34fca32",
+          "quantity": 1,
+          "unitPrice": 8
+        },
+        {
+          "productId": "d4128bff-426b-496e-9713-29ba58b030f7",
+          "quantity": 3,
+          "unitPrice": 55
+        },
+        {
+          "productId": "18c992d8-0802-48a7-814e-b729a65b66cb",
+          "quantity": 1,
+          "unitPrice": 4
+        }
+      ]
+    },
+    {
+      "id": "b4ae397f-adfb-40ca-a362-b1bb7b8b5551",
+      "customerName": "Luka Lukić",
+      "date": "2026-07-19",
+      "status": "u obradi",
+      "items": [
+        {
+          "productId": "2bd6192f-4f7d-414f-afa6-4908788a9db8",
+          "quantity": 2,
+          "unitPrice": 620
+        }
+      ]
+    },
+    {
+      "id": "eb529e6c-2ae5-4219-9650-3d3ef28d41a1",
+      "customerName": "Sara Savić",
+      "date": "2026-08-22",
+      "status": "završena",
+      "items": [
+        {
+          "productId": "986f2da1-60d4-49a9-8419-feaf6529ce58",
+          "quantity": 2,
+          "unitPrice": 65
+        },
+        {
+          "productId": "c153842e-589b-4a41-8468-02fc199f6f44",
+          "quantity": 2,
+          "unitPrice": 35
+        },
+        {
+          "productId": "9cfc9fa0-43e3-4fb2-acea-54fbb34fca32",
+          "quantity": 3,
+          "unitPrice": 8
+        }
+      ]
+    },
+    {
+      "id": "7730f13c-cf75-4932-bb42-6c5c83254b7e",
+      "customerName": "Vuk Vukašinović",
+      "date": "2026-09-25",
+      "status": "otkazana",
+      "items": [
+        {
+          "productId": "0625c2de-e84a-4675-ae7b-691de01057fb",
+          "quantity": 2,
+          "unitPrice": 320
+        }
+      ]
+    },
+    {
+      "id": "0a65c0a4-28ed-4d5a-bdf8-0728c6c14e94",
+      "customerName": "Ivana Ivanović",
+      "date": "2026-01-28",
+      "status": "u obradi",
+      "items": [
+        {
+          "productId": "d4128bff-426b-496e-9713-29ba58b030f7",
+          "quantity": 3,
+          "unitPrice": 55
+        }
+      ]
+    },
+    {
+      "id": "4d504ace-c355-4b0b-9cb5-ba2a7f8b3169",
+      "customerName": "Aleksa Aleksić",
+      "date": "2026-02-03",
+      "status": "završena",
+      "items": [
+        {
+          "productId": "18c992d8-0802-48a7-814e-b729a65b66cb",
+          "quantity": 1,
+          "unitPrice": 4
+        },
+        {
+          "productId": "b2edd595-a74c-45ec-be42-33917ba80f00",
+          "quantity": 3,
+          "unitPrice": 40
+        },
+        {
+          "productId": "c7a83d3e-1432-4722-818b-8fd5a15f4902",
+          "quantity": 1,
+          "unitPrice": 12
+        },
+        {
+          "productId": "c153842e-589b-4a41-8468-02fc199f6f44",
+          "quantity": 2,
+          "unitPrice": 35
+        }
+      ]
+    },
+    {
+      "id": "26e86ef5-455a-4445-99f4-bdd7ec74b507",
+      "customerName": "Teodora Todorović",
+      "date": "2026-03-06",
+      "status": "otkazana",
+      "items": [
+        {
+          "productId": "2bd6192f-4f7d-414f-afa6-4908788a9db8",
+          "quantity": 3,
+          "unitPrice": 620
+        }
+      ]
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
