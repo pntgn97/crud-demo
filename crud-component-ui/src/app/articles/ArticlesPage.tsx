@@ -14,5 +14,5 @@ export const ArticlesPage = () => {
     return <LookupStatus error={error} />;
   }
 
-  return <CrudComponent service={articleWithStockService} config={articleConfig} viewMode="master-detail" />;
+  return <CrudComponent service={articleWithStockService} config={articleConfig} viewMode="table" />;
 };
